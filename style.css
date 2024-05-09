@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.light {
+:root {
     --backgroundColor: #000;
     --textColor: #fff;
     --primaryColor: #43B443;
     --hoverColor: #32DE84;
-    --inputColor: #837a7a;
+    --inputColor: #d4cfcf;
     --placeholderColor: #ebdada;
 }
 
@@ -128,7 +128,7 @@ header .left .cta {
     padding: 0.9rem 1.9rem;
     text-transform: capitalize;
     outline: none;
-    background-color: #413f3f;
+    background-color: #3f3f3f;
     font-family: "Bricolage Grotesque", sans-serif;
     color: var(--textColor);
     margin-right: 15px;
@@ -137,7 +137,7 @@ header .left .cta {
 }
 
 .cta input::placeholder {
-    color: #ebdada;
+    color: #afaeae;
 }
 
 .cta .btn {
@@ -244,6 +244,177 @@ header .left .cta {
     right: 0;
 }
 
-.about-section {
+.about-section, .token-section {
+    display: flex;
+    padding: 3rem;
+}
+
+.about-section .container .box, .token-section .container .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--textColor);
+    padding: 0 2.5rem;
+    background-color: var(--backgroundColor);
+    border-radius: 1em;
+}
+
+.about-section .container .box .left {
+    display: block;
+    flex: 1;
+    width: 300px;
+}
+
+.about-section .container .box .left img {
+    height: 200px;
+    width: 200px;
+}
+
+.about-section .container .box .right,
+.token-section .container .box .left {
+    display: flex;
+    flex: 2;
+    align-items: end;
+    padding: 2rem 0;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--textColor);
+    background-color: var(--backgroundColor);
+    font-family: "Bricolage Grotesque", sans-serif;
+    text-align: right;
+}
+
+.container .box .right .heading {
+    display: flex;
+    flex-direction: column;
+    align-content: end;
+}
+
+.container .box  p {
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+}
+
+.container .box .right .btn-secondary, .token-section .box .left .btn-secondary {
     background: var(--textColor);
+    color: var(--backgroundColor);
+    border-radius: 16px;
+    padding: 0.9rem 1.9rem;
+}
+
+.token-section .container .box {
+    background-color: var(--primaryColor);
+    color: var(--backgroundColor);
+}
+
+.token-section .container .box .left {
+    background-color: var(--primaryColor);
+    color: var(--backgroundColor);
+}
+
+.token-section .container .box .left {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.token-section .container .box .left .btn-secondary {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-weight: bold;
+}
+
+.token-section .container .box .left p {
+    font-weight: 500;
+}
+
+.play-area {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+.play-area img {
+    height: 100%;
+    max-width: 81rem;
+    left: calc(50% - 40rem);
+    position: absolute;
+}
+
+.play-area .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.play-area .container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Bricolage Grotesque", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.play-area .container h1 span {
+    background-color: var(--hoverColor);
+    color: var(--backgroundColor);
+}
+
+.play-area .container h3 {
+    font-weight: 400;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: center;
+}
+
+.cards-section .container{
+    margin: 10rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.cards-section .cards {
+    position: relative;
+    padding: 2rem 3rem;
+    background-color: var(--hoverColor);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.cards-section .cards .img-section {
+    position: absolute;
+    background-color: var(--textColor);
+    padding: 0.5rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -35px;
+    left: calc(50% - 35px);
+    border: 8px solid var(--hoverColor);
+}
+
+.cards-section .cards img {
+    height: 30px;
+    width: 30px;
+}
+
+.cards-section .cards h3 {
+    margin: 1rem;
+    font-size: 25px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+footer {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
 }
