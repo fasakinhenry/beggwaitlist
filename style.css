@@ -382,7 +382,7 @@ header .hamburger-menu .bar {
 }
 
 .token-section .container .box .left p {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .play-area {
@@ -611,10 +611,56 @@ footer .logo {
 
 /* Handle responsiveness for mobile screens */
 @media screen and (max-width: 750px) {
+
+    header .container{
+        padding: 0 2rem;
+    }
+
+    .showcase-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100vw;
+    }
+
+    .showcase-area .container {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+        overflow: scroll;
+        grid-gap: 0;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .showcase-area .container .left {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .showcase-area .container .left p {
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .showcase-area .container .left input {
+        width: 100%;
+        min-width: 200px;
+    }
+
     .big-title {
         font-size: 1.5rem;
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
+        line-height: 1;
+    }
+
+    .big-title span {
+        font-family: "Bricolage Grotesque", sans-serif;
     }
 
     .text {
@@ -635,11 +681,20 @@ footer .logo {
     }
 
     .about-section, .token-section {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
-    
-    .about-section .container .box{
+
+    .token-section {
+        padding-top: 0;
+    }
+
+    .about-section .container, .token-section .container {
+        padding: 0 1.5rem;
+    }
+
+    .about-section .container .box, .token-section .container .box{
         grid-template-columns: 1fr;
+        padding: 0 1.5rem;
         position: relative;
         width: 100%;
     }
@@ -651,11 +706,67 @@ footer .logo {
 
     .about-section .container .box .right {
         width: 100%;
-        flex: 3;
-        text-align: left;
+        align-items: start;
+        text-align: left;        
     }
 
-    .about-section .container .box .right .heading h1 {
+    .about-section .container .box .right .heading,
+    .token-section .container .box .left .heading {
+        margin-bottom: 1rem;
+    }
+
+    .about-section .container .box .right .heading h1,
+    .token-section .container .box .left .heading h1 {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .about-section .container .box .right p {
+        font-size: 0.9rem;
+    }
+
+    .btn-secondary {
+        width: 100%;
         text-align: center;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    footer {
+        max-width: 100vw;
+    }
+
+    footer .container {
+        max-width: 100vw;
+    }
+
+    footer .left {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    footer .follow {
+        font-size: 1.1rem;
+    }
+
+    .play-area {
+        height: 60vh;
+    }
+
+    .play-area .container {
+        padding: 0 2rem;
+    }
+
+    .play-area .container h1 {
+        font-size: 2.1rem;
+        text-align: center;
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+
+    .play-area .container h3 {
+        font-weight: 400;
+        font-size: 1rem;
+        margin-top: 1rem;
     }
 }
