@@ -545,7 +545,7 @@ footer .logo {
     .links ul li a {
         color: var(--backgroundColor);
         padding: 2rem 0;
-        margin-left: 0;
+        margin-right: 0;
     }
 
     .links ul li a:hover {
@@ -733,7 +733,7 @@ footer .logo {
     }
 
     footer {
-        max-width: 100vw;
+        height: 70vh;
     }
 
     footer .container {
