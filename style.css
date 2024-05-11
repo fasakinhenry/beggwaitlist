@@ -524,6 +524,21 @@ footer .logo {
     max-width: 100%;
 }
 
+.icons {
+    margin-top: 2rem;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.icons a {
+    color: var(--textColor);
+    margin-right: 1.5em;
+}
+
+.icons a i {
+    font-size: 80px;
+}
+
 /* Handle responsiveness of the page for tab screens */
 @media screen and (max-width: 980px) {
     .big-wrapper {
@@ -560,6 +575,10 @@ footer .logo {
     }
 
     .links ul li a:hover {
+        color: var(--textColor);
+    }
+
+    header .links a.active {
         color: var(--textColor);
     }
 
@@ -795,5 +814,17 @@ footer .logo {
         font-size: 1rem;
         margin-top: 1rem;
         text-align: left;
+    }
+
+    .icons {
+        justify-content: space-between;
+    }
+
+    .icons a {
+        margin: 0;
+    }
+
+    .icons a i {
+        font-size: 50px;
     }
 }
