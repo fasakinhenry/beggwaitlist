@@ -49,13 +49,16 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     width: 100%;
     padding: 1.7rem 0 2rem;
     min-height: 100vh;
     overflow: hidden;
     background-color: var(--backgroundColor);
     color: var(--textColor);
+}
+
+.showcase-area .container {
+    padding-top: 10.5em;
 }
 
 .container {
@@ -118,7 +121,7 @@ header .links a {
     transition: 0.2s;
 }
 
-header .links a:hover {
+header .links a:hover, header .links a.active {
     color: var(--primaryColor);
     transform: scale(1.05);
 }
@@ -307,6 +310,10 @@ header .hamburger-menu .bar {
     padding: 3rem;
 }
 
+.token-section {
+    padding-top: 0;
+}
+
 .about-section .container .box, .token-section .container .box {
     position: relative;
     display: grid;
@@ -368,9 +375,9 @@ header .hamburger-menu .bar {
 .token-section .container .box .left {
     background-color: var(--primaryColor);
     color: var(--backgroundColor);
-}
-
-.token-section .container .box .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
     align-items: flex-start;
 }
@@ -383,6 +390,7 @@ header .hamburger-menu .bar {
 
 .token-section .container .box .left p {
     font-weight: 400;
+    margin: 2rem 0;
 }
 
 .play-area {
@@ -518,6 +526,9 @@ footer .logo {
 
 /* Handle responsiveness of the page for tab screens */
 @media screen and (max-width: 980px) {
+    .big-wrapper {
+        justify-content: space-between;
+    }
     header .hamburger-menu {
         display: flex;
     }
@@ -605,7 +616,7 @@ footer .logo {
 
     .cards-section .container {
         grid-template-columns: 1fr;
-        grid-gap: 5em;
+        grid-gap: 4em;
     }
 }
 
@@ -654,7 +665,6 @@ footer .logo {
 
     .big-title {
         font-size: 1.5rem;
-        margin: 0 auto;
         text-align: left;
         line-height: 1;
     }
@@ -712,7 +722,7 @@ footer .logo {
 
     .about-section .container .box .right .heading,
     .token-section .container .box .left .heading {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .about-section .container .box .right .heading h1,
@@ -721,26 +731,42 @@ footer .logo {
         font-size: 1.5rem;
     }
 
-    .about-section .container .box .right p {
+    .about-section .container .box .right p, .token-section .container .box .left p {
         font-size: 0.9rem;
+    }
+
+    .token-section .container .box .left p {
+        font-weight: 400;
+        margin: 0.5rem 0;
+    }
+
+    .token-section .container .box .right img {
+        display: none;
     }
 
     .btn-secondary {
         width: 100%;
         text-align: center;
         font-weight: bold;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .cards-section .container {
+        margin: 4em 0;
     }
 
     footer {
-        height: 70vh;
+        height: 50vh;
     }
 
     footer .container {
         max-width: 100vw;
     }
 
-    footer .left {
+    footer .container .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
         font-size: 1.5rem;
         max-width: 100%;
     }
@@ -750,23 +776,24 @@ footer .logo {
     }
 
     .play-area {
-        height: 60vh;
+        height: 40vh;
     }
 
     .play-area .container {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
+        align-items: start;
     }
 
     .play-area .container h1 {
         font-size: 2.1rem;
-        text-align: center;
+        text-align: left;
         margin-bottom: 0;
-        line-height: 1.2;
     }
 
     .play-area .container h3 {
         font-weight: 400;
         font-size: 1rem;
         margin-top: 1rem;
+        text-align: left;
     }
 }
