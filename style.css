@@ -4,10 +4,12 @@
 :root {
     --backgroundColor: #000;
     --textColor: #fff;
-    --primaryColor: #43B443;
-    --hoverColor: #32DE84;
+    --primaryColor2: #43B443;
+    --primaryColor: #14a800;
+    --hoverColor2: #32DE84;
+    --hoverColor: #43B443;
     --inputColor: #d4cfcf;
-    --placeholderColor: #ebdada;
+    --placeholderColor2: #ebdada;
 }
 
 .dark {
