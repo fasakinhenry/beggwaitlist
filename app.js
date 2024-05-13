@@ -13,9 +13,9 @@ async function joinWaitlist(e) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                "email": email
-            })
+            body: {
+                'email': email
+            }
         });
         const waitlist_response = await response.json();
         console.log(waitlist_response);
