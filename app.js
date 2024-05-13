@@ -5,12 +5,13 @@ hamburger_menu.addEventListener("click", ()=> {
     big_wrapper.classList.toggle("active");
 });
 
-async function joinWaitlist() {
+async function joinWaitlist(e) {
     try {
+        e.preventDefault();
         const response = await fetch("https://begg-dev-backend.onrender.com/waitlist/wait", {
             method: "POST",
             body: {
-                "email": "alexindevs@gmail.com"
+                "email": email
             }
         });
         const waitlist_response = await response.json();
