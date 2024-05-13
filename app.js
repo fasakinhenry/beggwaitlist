@@ -7,7 +7,6 @@ hamburger_menu.addEventListener("click", ()=> {
 
 async function joinWaitlist(e) {
     try {
-        e.preventDefault();
         const response = await fetch("https://begg-dev-backend.onrender.com/waitlist/wait", {
             method: "POST",
             body: {
@@ -20,3 +19,5 @@ async function joinWaitlist(e) {
         console.log('Error ', error);
     }
 }
+
+document.getElementById("cta").addEventListener("submit", joinWaitlist);
