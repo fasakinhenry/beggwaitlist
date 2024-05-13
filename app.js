@@ -10,9 +10,12 @@ async function joinWaitlist(e) {
         e.preventDefault();
         const response = await fetch("https://begg-dev-backend.onrender.com/waitlist/wait", {
             method: "POST",
-            body: {
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
                 "email": email
-            }
+            })
         });
         const waitlist_response = await response.json();
         console.log(waitlist_response);
