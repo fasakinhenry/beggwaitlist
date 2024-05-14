@@ -165,6 +165,8 @@ header .left .cta {
     padding: 0.9rem 1.9rem;
     text-transform: capitalize;
     transition: 0.3s ease-in-out;
+    border: none;
+    outline: none;
 }
 
 .btn:hover {
@@ -770,6 +772,8 @@ footer .logo {
         text-align: center;
         font-weight: bold;
         margin-top: 0.5rem;
+        border: none;
+        outline: none;
     }
 
     .cards-section .container {
