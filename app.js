@@ -1,5 +1,5 @@
 let hamburger_menu = document.querySelector(".hamburger-menu");
-let email = document.querySelector("#email");
+let email = document.querySelector("#email").value;
 let big_wrapper = document.querySelector(".big-wrapper");
 hamburger_menu.addEventListener("click", ()=> {
     big_wrapper.classList.toggle("active");
@@ -10,7 +10,7 @@ async function joinWaitlist() {
         const response = await fetch("https://begg-dev-backend.onrender.com/waitlist/wait", {
             method: "POST",
             body: {
-                "email": "alexindevs@gmail.com"
+                "email": email
             }
         });
         const waitlist_response = await response.json();
